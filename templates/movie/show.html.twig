@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MovieController!{% endblock %}
+
+{% block body %}
+    <div class="row">
+
+            <div class="col">
+                <div class="card">
+                    <img src="{{ movieId.imgMovie }}" class=img-fluid" alt="Image du produit" width="200px" height="250px">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ movieId.name }}</h4>
+                        <span class="badge badge-info">{{ movieId.releaseDate | date ('d-m-Y')}}</span>
+                        <p class="card-text">{{ movieId.synopsis }}</p>
+                        <a href="{{ path('app_movie_index') }}" class="btn btn-primary btn-sm">Retour</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+{% endblock %}
